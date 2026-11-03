@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Control de Equipos e Insumos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f3f0f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #5b3b70;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #ddd2e5;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #4b315d;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #5b3b70;
+        }
+
+        h3 {
+            color: #76538b;
+        }
+
+        .frames {
+            display: flex;
+            gap: 15px;
+        }
+
+        .frame {
+            background-color: #eee7f2;
+            padding: 15px;
+            border-radius: 8px;
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            background-color: #76538b;
+            color: white;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        input, select {
+            padding: 9px;
+            margin: 5px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #5b3b70;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #76538b;
+        }
+
+        footer {
+            background-color: #5b3b70;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            .frames {
+                display: block;
+            }
+
+            .frame {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<script>
+    let nombre = prompt("¿Cuál es tu nombre?");
+
+    if (!nombre || nombre.trim() === "") {
+        nombre = "Usuario";
+    }
+
+    alert("Bienvenido/a " + nombre);
+
+    document.write("<p style='text-align:center;'>Bienvenido/a " + nombre + "</p>");
+</script>
+<header>
+    <h1>Sistema de Control de Equipos e Insumos</h1>
+    <p>Coordinación Académica</p>
+</header>
+
+<nav>
+    <a href="#area">Área</a>
+    <a href="#problema">Problemática</a>
+    <a href="#objetivo">Objetivo</a>
+    <a href="#sistema">Sistema</a>
+    <a href="#registro">Registro</a>
+</nav>
+
+<section>
+    <h2>Organización y control de recursos</h2>
+    <p>
+        Sistema destinado a mejorar la organización y el control
+        de los equipos e insumos de Coordinación Académica.
+    </p>
+</section>
+
+<section id="area">
+    <h2>Coordinación Académica</h2>
+
+    <p>
+        Es el área encargada de organizar y dar seguimiento
+        a las actividades académicas del plantel.
+    </p>
+
+    <h3>¿De qué se encarga?</h3>
+
+    <ul>
+        <li>Organizar actividades académicas.</li>
+        <li>Dar seguimiento al personal docente.</li>
+        <li>Administrar documentos.</li>
+        <li>Organizar recursos y materiales.</li>
+    </ul>
+</section>
+
+<section id="problema">
+    <h2>Problemática</h2>
+
+    <p>
+        Actualmente existen dificultades para controlar los
+        equipos y materiales del área. También hacen falta
+        impresoras y se necesita mejorar el mantenimiento
+        de los equipos y el control de antivirus.
+    </p>
+</section>
+
+<section id="objetivo">
+    <h2>Objetivo</h2>
+
+    <p>
+        Crear un sistema que permita registrar y consultar
+        los equipos, insumos y mantenimientos de Coordinación
+        Académica para mejorar su organización y control.
+    </p>
+</section>
+
+<section id="sistema">
+    <h2>Opciones del sistema</h2>
+
+    <ol>
+        <li>Registrar equipo: tipo, área y estado.</li>
+        <li>Registrar insumo: nombre, cantidad y unidad.</li>
+        <li>Registrar mantenimiento: equipo, fecha y trabajo realizado.</li>
+        <li>Consultar inventario.</li>
+        <li>Mostrar todos los registros.</li>
+    </ol>
+
+    <h3>¿Cómo funciona?</h3>
+
+    <ul>
+        <li><b>Guardar:</b> almacena la información.</li>
+        <li><b>Consultar:</b> muestra los registros.</li>
+    </ul>
+
+    <h3>Usuarios</h3>
+    <p>Personal docente y administrativo.</p>
+</section>
+
+<section>
+    <h2>Los 3 frames del sistema</h2>
+
+    <div class="frames">
+
+        <div class="frame">
+            <h3>Frame 1: Menú</h3>
+            <p>
+                Contendrá las opciones para registrar equipos,
+                insumos y mantenimientos.
+            </p>
+        </div>
+
+        <div class="frame">
+            <h3>Frame 2: Registro</h3>
+            <p>
+                Permitirá ingresar los datos de cada registro.
+            </p>
+        </div>
+
+        <div class="frame">
+            <h3>Frame 3: Consulta</h3>
+            <p>
+                Mostrará la información guardada.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Ejemplo de inventario</h2>
+
+    <h3>Equipos</h3>
+
+    <table>
+        <tr>
+            <th>Equipo</th>
+            <th>Área</th>
+            <th>Estado</th>
+        </tr>
+
+        <tr>
+            <td>Computadora</td>
+            <td>Coordinación</td>
+            <td>Mal estado</td>
+        </tr>
+
+        <tr>
+            <td>Impresora</td>
+            <td>Coordinación</td>
+            <td>En uso</td>
+        </tr>
+    </table>
+
+    <h3>Insumos</h3>
+
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Cantidad</th>
+        </tr>
+
+        <tr>
+            <td>Hojas</td>
+            <td>110</td>
+        </tr>
+    </table>
+
+    <p>Los datos son ejemplos ilustrativos.</p>
+</section>
+
+<section id="registro">
+    <h2>Registro</h2>
+
+    <select id="opcion">
+        <option>Registrar equipo</option>
+        <option>Registrar insumo</option>
+        <option>Registrar mantenimiento</option>
+    </select>
+
+    <br>
+
+    <input type="text" placeholder="Dato 1">
+    <input type="text" placeholder="Dato 2">
+    <input type="text" placeholder="Dato 3">
+
+    <br>
+
+    <button onclick="guardar()">Guardar</button>
+    <button onclick="mostrar()">Consultar</button>
+
+    <p id="resultado">Aquí aparecerán los registros.</p>
+</section>
+
+<section>
+    <h2>¿De qué te sirve?</h2>
+
+    <ul>
+        <li>Saber qué computadoras funcionan y cuáles están dañadas.</li>
+        <li>Consultar los insumos disponibles.</li>
+        <li>Tener la información organizada.</li>
+        <li>Llevar el control de los mantenimientos.</li>
+        <li>Facilitar el uso del sistema.</li>
+    </ul>
+</section>
+
+<footer>
+    Sistema de Control de Equipos e Insumos
+</footer>
+
+<script>
+
+    let datos = [];
+
+    function guardar() {
+
+        let opcion = document.getElementById("opcion").value;
+
+        datos.push(opcion);
+
+        alert("Registro guardado");
+    }
+
+    function mostrar() {
+
+        if (datos.length == 0) {
+            document.getElementById("resultado").innerHTML =
+                "No hay registros.";
+        } else {
+            document.getElementById("resultado").innerHTML =
+                datos.join("<br>");
+        }
+    }
+
+</script>
+
+</body>
+</html>
